@@ -1,0 +1,26 @@
+public static void SelectionSort(int[] array){
+    int lastUnsortedIndex = array.length - 1;
+    int largest = 0;
+    int i;
+    int temp;
+    boolean sorted = false;
+
+    while (!sorted){
+
+        for (i = 0; i < lastUnsortedIndex; i++){
+            if (array[i] > array[largest]){
+                largest = i;
+            }
+        }
+
+        temp = array[lastUnsortedIndex];
+        array[lastUnsortedIndex] = array[largest];
+        array[largest] = temp;
+        lastUnsortedIndex = i - 1;
+
+        if (lastUnsortedIndex == 0) sorted = true;
+
+    }
+
+
+}

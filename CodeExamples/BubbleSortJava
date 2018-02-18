@@ -1,0 +1,18 @@
+public static void BubbleSort(int[] array){
+    int unsortedParrtitionIndex = array.length - 1;
+    int temp;
+    int i;
+    boolean sorted = false;
+
+    while (!sorted){
+        for (i = 0; i < unsortedParrtitionIndex; i++){
+            if (array[i] > array[i+1]){
+                temp = array[i];
+                array[i] = array[i+1];
+                array[i+1] = temp;
+            }
+        }
+        unsortedParrtitionIndex = i - 1;
+        if (unsortedParrtitionIndex == 0) sorted = true;
+    }
+}

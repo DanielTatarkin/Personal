@@ -1,0 +1,17 @@
+public static void InsertionSort(int[] array){
+    int firstUnsortedIndex = 1;
+    int newElement = array[firstUnsortedIndex];
+
+    while (firstUnsortedIndex < array.length) {
+
+        for (int i = firstUnsortedIndex-1; i >= 0; i--) {
+            if (array[i] > newElement) {
+                array[i+1] = array[i];
+                array[i] = newElement;
+            }
+        }
+
+        firstUnsortedIndex++;
+        if (firstUnsortedIndex < array.length) newElement = array[firstUnsortedIndex];
+    }
+}
